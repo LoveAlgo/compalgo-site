@@ -1,0 +1,29 @@
+---
+layout: default
+---
+{% if page.score_box %}
+<section class="score-box" aria-live="polite">
+  <div id="score-found" hidden>
+    <p class="score-label">Your compatibility score</p>
+    <p class="score-value" id="score-value"></p>
+    <a class="button" href="{{ page.score_box | relative_url }}">Calculate another match</a>
+  </div>
+  <div id="score-missing">
+    <p class="score-label">No compatibility score yet.</p>
+    <a class="button" href="{{ page.score_box | relative_url }}">Calculate your compatibility</a>
+  </div>
+</section>
+<script>
+  (function () {
+    var m = /score=(\d+)/.exec(window.location.hash);
+    if (!m) return;
+    document.getElementById('score-value').textContent = m[1];
+    document.getElementById('score-found').hidden = false;
+    document.getElementById('score-missing').hidden = true;
+  })();
+</script>
+{% endif %}
+<article class="text-page">
+  <h1>{{ page.title }}</h1>
+{{ content }}
+</article>

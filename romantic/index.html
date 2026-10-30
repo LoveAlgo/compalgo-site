@@ -1,0 +1,56 @@
+---
+layout: default
+title: Romantic compatibility
+description: Calculate the romantic compatibility score between two individuals.
+permalink: /romantic/
+script: romantic.js
+---
+<div class="calculator">
+  <h1>Calculate your compatibility</h1>
+  <p class="intro">The calculation runs in your browser. Nothing you enter is stored or sent anywhere.</p>
+
+  <form id="romantic-form" data-results="{{ '/romantic/results/' | relative_url }}">
+    <p id="form-error" class="form-error" tabindex="-1" hidden>The score could not be calculated. Check that every name and birth date is filled in correctly, then try again.</p>
+{% for n in (1..2) %}
+    <fieldset class="person">
+      <legend>Individual {{ n }}</legend>
+      <div class="field-grid">
+        <div class="field">
+          <label for="individual{{ n }}_first_name">First name</label>
+          <input type="text" id="individual{{ n }}_first_name" name="individual{{ n }}_first_name" autocomplete="off" required>
+        </div>
+        <div class="field">
+          <label for="individual{{ n }}_middle_name">Middle name(s) (if applicable)</label>
+          <input type="text" id="individual{{ n }}_middle_name" name="individual{{ n }}_middle_name" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="individual{{ n }}_last_name">Last name</label>
+          <input type="text" id="individual{{ n }}_last_name" name="individual{{ n }}_last_name" autocomplete="off" required>
+        </div>
+        <div class="field">
+          <label for="individual{{ n }}_maiden_name">Maiden name (if applicable)</label>
+          <input type="text" id="individual{{ n }}_maiden_name" name="individual{{ n }}_maiden_name" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="individual{{ n }}_birthdate">Birth date</label>
+          <input type="date" id="individual{{ n }}_birthdate" name="individual{{ n }}_birthdate" min="1000-01-01" max="9999-12-31" required>
+        </div>
+        <div class="field">
+          <label for="individual{{ n }}_birth_order">Birth order</label>
+          <select id="individual{{ n }}_birth_order" name="individual{{ n }}_birth_order" required>
+            <option value="">Select birth order</option>
+            <option>First Born</option>
+            <option>Second Born</option>
+            <option>Third Born</option>
+            <option>Fourth Born or Later</option>
+            <option>Only Child</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+{% endfor %}
+    <div class="submit-row">
+      <button type="submit" class="submit-button">Calculate compatibility</button>
+    </div>
+  </form>
+</div>

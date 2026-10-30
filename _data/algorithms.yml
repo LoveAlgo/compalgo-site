@@ -1,0 +1,12 @@
+# The compatibility algorithms on (or linked from) Compalgo.
+# When there is more than one, the home page shows them as a list below the heart.
+# To add one later, remove the # in front of its lines (keep the spacing).
+- name: Romantic compatibility
+  url: /romantic/
+  description: Test the romantic compatibility between two individuals, based on their names, birth dates and birth order.
+# - name: Place compatibility
+#   url: https://www.placealgo.com
+#   description: Find out which places are compatible with you, on Placealgo.
+# - name: Career compatibility
+#   url: /career/
+#   description: Find out which careers are compatible with you.

@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<section class="welcome">
+  <a class="welcome-heart" href="{{ page.button_link | default: '/romantic/' | relative_url }}">
+    <img class="welcome-outline" src="{{ '/assets/images/heart-outline.png' | relative_url }}" alt="">
+    <span class="welcome-line">{{ page.welcome_line }}</span>
+    <img class="welcome-logo" src="{{ '/assets/images/compalgo-logo.svg' | relative_url }}" alt="Compalgo">
+    <span class="welcome-tagline">{{ page.tagline }}</span>
+    <span class="welcome-button">{{ page.button_text }}</span>
+    <span class="welcome-person welcome-person-1">Individual 1</span>
+    <span class="welcome-person welcome-person-2">Individual 2</span>
+  </a>
+</section>
+{% assign body = content | strip %}
+{% if body != "" %}
+<article class="text-page">
+{{ content }}
+</article>
+{% endif %}
+{% if site.data.algorithms.size > 1 %}
+<section class="text-page algorithm-list">
+  <h2>Our compatibility algorithms</h2>
+  <ul>
+{% for algo in site.data.algorithms %}
+    <li><a href="{{ algo.url | relative_url }}">{{ algo.name }}</a>: {{ algo.description }}</li>
+{% endfor %}
+  </ul>
+</section>
+{% endif %}

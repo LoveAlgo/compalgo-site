@@ -1,0 +1,12 @@
+# Links in the top menu, in order.
+# To add a link later, remove the # in front of the lines (keep the spacing).
+- title: Romantic compatibility
+  url: /romantic/
+# - title: Place compatibility
+#   url: https://www.placealgo.com
+# - title: Career compatibility
+#   url: /career/
+- title: About
+  url: /about/
+- title: Science
+  url: /science/

@@ -1,0 +1,17 @@
+# Compalgo site settings
+title: Compalgo
+description: Compatibility algorithms
+url: "https://www.compalgo.com"
+
+# Google Analytics measurement ID for compalgo.com.
+# Measurement ID from Google Analytics (Admin → Data streams). Keep the quotes.
+google_analytics_id: "G-NYEWQMTMTC"
+
+# Address used on the contact page
+contact_email: henrik.hillerstrom@gmail.com
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README.md

@@ -1,0 +1,108 @@
+# Browser editor settings (Pages CMS, app.pagescms.org)
+media:
+  input: assets/images
+  output: /assets/images
+
+settings:
+  content:
+    merge: true
+
+content:
+  - name: home
+    label: Home page
+    type: file
+    path: index.html
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: welcome_line
+        label: Text above the logo
+        type: string
+      - name: tagline
+        label: Text below the logo
+        type: string
+      - name: button_text
+        label: Button text
+        type: string
+      - name: body
+        label: Extra text below the heart (optional)
+        type: rich-text
+        options:
+          format: html
+
+  - name: romantic-results
+    label: Romantic results page
+    type: file
+    path: romantic/results.html
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: html
+
+  - name: about
+    label: About
+    type: file
+    path: about.html
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: html
+
+  - name: science
+    label: Science
+    type: file
+    path: science.html
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: html
+
+  - name: contact
+    label: Contact
+    type: file
+    path: contact.html
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: html
+
+  - name: disclaimer
+    label: Disclaimer
+    type: file
+    path: disclaimer.html
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: html
